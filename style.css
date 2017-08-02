@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+.clearfix:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.sidebar{
+    float:left;
+    background:#353F55;
+    width:20%;
+    height:100vh;
+    color:#fff;
+}
+.sidebar h1{
+    width:60%;
+    margin:30px auto;
+    padding-bottom:20px;
+    letter-spacing:3px;
+    white-space: nowrap;
+}
+.sidebar h3{
+    width:60%;
+    margin:10px auto;
+}
+.sidebar .catlist{
+    width:60%;
+    margin:0 auto;
+}
+.sidebar .catlist li{
+    margin:10px auto;
+    height:40px;
+    line-height:40px;
+    font-size:1rem;
+    cursor: pointer;
+}
+.sidebar .catlist li:hover{
+    transition:transform 0.3s;
+    transform:translateX(20px);
+}
+.sidebar .catlist li i{
+    width:30px;
+    height:50px;
+    line-height:50px;
+}
+.viewpart{
+    width:80%;
+    float:right;
+    padding:20px 50px;
+}
+.viewpart .btn{
+    text-align: center;
+    display:inline-block;
+    width:100px;
+    height:40px;
+    line-height:40px;
+    border-radius:5px;
+    color:#fff;
+    margin-left:10px;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+.viewpart .newTask .add{
+    background:#5CC853;
+}
+.viewpart .newTask .add:hover{
+    background:#5CC853;
+}
+.viewpart .newTask .empty{
+    background:#D9534F;
+}
+.viewpart .newTask .empty:hover{
+    background:#B72712;
+}
+.viewpart .newTask .user{
+    float:right;
+    height:50px;
+    line-height:50px;
+    color:#777;
+    font-size:14px;
+}
+.viewpart .newTask .user .logout{
+    padding:8px 10px;
+    background:transparent;
+    border:1px solid #ccc;
+    border-radius:5px;
+    cursor:pointer;
+    color:#777;
+    margin-left:10px;
+}
+.viewpart .newTask .user .logout:hover{
+    background:#eee;
+    transition:all 0.5s;
+}
+.viewpart .newTask input{
+    padding:5px 12px;
+    width:300px;
+    height:50px;
+    font-size:1.2rem;
+    border-radius:5px;
+    border: 1px solid #ccc;
+
+}
+.viewpart .todos{
+    margin-top:20px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    overflow:hidden;
+}
+.viewpart .todos li{
+    padding:10px 16px;
+    height:60px;
+    line-height:60px;
+    border-bottom:1px solid #ccc;
+    position:relative;
+}
+.viewpart .todos li:last-child{
+    border-bottom:none;
+}
+.viewpart .todos li span:nth-child(1),
+.viewpart .todos li span:nth-child(2){
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+.viewpart .todos li span:nth-child(2){
+    left:50px;
+    cursor:pointer;
+}
+.viewpart .todos li .del{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    right:16px;
+    width:50px;
+    background:#FFDA44;
+}
+.viewpart .todos li .del:hover{
+    background:#FDD048;
+}
+.viewpart .todos li.finished{
+    background:#eee;
+}
+.viewpart .todos li span:nth-child(3){
+    position:absolute;
+    right:90px;
+    color:#ccc;
+    font-size:0.5rem;
+}
+.viewpart .todos li span.finished{
+    transition:all 0.5s;
+    color:#ccc;
+    text-decoration: line-through;
+}
+.viewpart .todos li span.inactive i{
+    transition:all 0.5s;
+    color:#ccc;
+}
+.viewpart .todos li span.active i{
+    transition:all 0.5s;
+    color:#5CC853;
+}
+#signinup{
+    background:#353F55;
+    width:100vw;
+    height:100vh;
+    position:relative;
+    overflow: hidden;
+}
+#signinup .signlogin-ct{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+#signinup .signlogin-ct h1{
+    text-align: center;
+    font-size:2rem;
+    color:#fff;
+    margin-bottom:20px;
+}
+#signinup .signlogin-ct .signlogin-wrapper{
+    box-shadow:0 0 8px #333;
+    border-radius:5px;
+    background: #fff;
+}
+#signinup .signlogin-ct .sign-ct{
+    width:300px;
+    height:50px;
+    text-align: center;
+}
+#signinup .signlogin-ct .sign-ct label{
+    letter-spacing:16px;
+    padding-left:16px;
+    height:50px;
+    line-height:50px;
+    margin:0 30px;
+    color:#3B4465;
+    padding-bottom: 12px;
+    cursor:pointer;
+    opacity:0.6;
+}
+#signinup .signlogin-ct .sign-ct label.active{
+    border-bottom: 2px solid #353F55;
+    opacity:1;
+
+}
+#signinup .signlogin-ct .sign-ct label input{
+    display:none;
+}
+#signinup .signlogin-ct .signup,
+#signinup .signlogin-ct .login{
+    margin-top:10px;
+    width:300px;
+    text-align: center;
+    overflow:hidden;
+}
+
+#signinup .signlogin-ct .formrow{
+    margin-bottom:20px;
+}
+#signinup .signlogin-ct .formrow p{
+    width:80%;
+    text-align: left;
+    height:30px;
+    line-height:30px;
+    color:#BECACA;
+    margin:0 auto;
+}
+#signinup .signlogin-ct .formrow input{
+    width:80%;
+    height:40px;
+    display:block;
+    margin:0 auto;
+    background:#EEF9FE;
+    border:1px solid #D7E3F2;
+    border-radius: 5px;
+    padding:0 10px;
+}
+#signinup .signlogin-ct .formacitons{
+    float:right;
+    margin-bottom:20px;
+    margin-right:10%;
+}
+#signinup .signlogin-ct .formacitons input{
+    color:#fff;
+    font-size:18px;
+    width:100px;
+    height:40px;
+    line-height:40px;
+    display:block;
+    text-align:center;
+    border-radius: 1.5rem;
+    border:2px solid #B0E559;
+    cursor:pointer;
+}
+#signinup .signlogin-ct .signup .formacitons input{
+    background:#B0E559;
+}
+#signinup .signlogin-ct .signup .formacitons input:hover{
+    transition:all 0.3s;
+    background:#5CB85C;
+    border:2px solid #5CB85C;
+}
+#signinup .signlogin-ct .login .formacitons input{
+    color:#B0E559;
+    background:#fff;
+    border:2px solid #B0E559;
+}
+#signinup .signlogin-ct .login .formacitons input:hover{
+    background:#B0E559;
+    border:2px solid #B0E559;
+    transition:all 0.3s;
+    color:#fff;
+}
